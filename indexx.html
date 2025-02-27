@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe to Download</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #2f2f2f; /* Dark gray background */
+            color: white;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            color: #ff0000;
+            font-weight: bold; /* Bold red text */
+        }
+        p {
+            font-size: 18px;
+        }
+        button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+        .download-section {
+            display: none;
+            margin-top: 30px;
+        }
+        .warning {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To Download:</h1>
+        <p><strong>1st: Subscribe</strong></p>
+        <p><strong>2nd: Like the video</strong></p>
+        <p><strong>Then, you can download the file.</strong></p>
+        
+        <p>If download doesn't work:</p>
+        <p class="warning"><strong>It might be because your antivirus or firewall is blocking the download, or the file might have been removed by Google Roblox.</strong></p>
+
+        <p>We appreciate your support!</p>
+
+        <a href="https://www.youtube.com/channel/UCX1Nb8MR3n27KP-OTF_1hQw" target="_blank">
+            <button>Subscribe to My YouTube Channel</button>
+        </a>
+
+        <div class="download-section" id="download-section">
+            <h2>Thank you for subscribing!</h2>
+            <p>You can now download the file:</p>
+            <a href="path/to/your/file.zip" download>
+                <button>Download File</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Check if user has subscribed (using localStorage for demo purposes)
+        if(localStorage.getItem("subscribed") === "true") {
+            document.getElementById("download-section").style.display = "block";
+        }
+
+        // Event listener for button
+        document.querySelector("button").addEventListener("click", function() {
+            alert("Please subscribe and like the video first! Once done, you can return here to access the download.");
+            // Redirect user to YouTube channel for subscribing
+            window.location.href = "https://www.youtube.com/channel/UCX1Nb8MR3n27KP-OTF_1hQw";
+        });
+
+        // Mockup: You could manually set the localStorage after verifying subscription
+        // For example, in practice, you could have a subscription check on the backend
+        // localStorage.setItem("subscribed", "true");
+    </script>
+</body>
+</html>
